@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>简历</title>
+    <title>何天颢的简历</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,24 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .header-text {
+            text-align: center;
+            flex: 1;
+        }
+        .profile-pic {
+            width: 132px; 
+            height: 180px; 
+            object-fit: cover;
+            position: absolute;
+            right: 0;
         }
         .section {
             margin-bottom: 20px;
@@ -29,70 +47,139 @@
             list-style-type: none;
             padding-left: 0;
         }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex-container-edu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .flex-item-left {
+            flex: 2;
+            text-align: left;
+        }
+        .flex-item-center {
+            flex: 1;
+            text-align: center;
+        }
+        .flex-item-right {
+            flex: 0 0 auto;
+            text-align: right;
+        }
+        .flex-item-center-edu {
+            flex: 3;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="section">
-            <h1>何天颢</h1>
-            <p>邮箱：riveertian@163.com | 电话：18397992633</p>
-            <p>地址：江西省南昌市红谷滩区学府大道999号</p>
+        <div class="header">
+            <div class="header-text">
+                <h1>何天颢</h1>
+                <p>邮箱：riveertian@163.com | 电话：18397992633</p>
+                <p>地址：江西省南昌市红谷滩区学府大道999号</p>
+            </div>
+            <img src="./img/photo.jpg" alt="证件照" class="profile-pic">
         </div>
 
         <div class="section">
             <h2>教育背景</h2>
-            <p>2021年9月-至今 南昌大学 计算机科学与技术专业（本科）</p>
-            <p>学习能力：绩点排名：17/242（前7%） 平均绩点（GPA）：3.70/4.00</p>
+            <div class="flex-container-edu">
+                <div class="flex-item-left">南昌大学（211、双一流高校）</div>
+                <div class="flex-item-center-edu">数学与计算机学院</div>
+                <div class="flex-item-right">计算机科学与技术专业</div>
+            </div>
+            <p><strong>平均学分绩点（GPA）：3.70/4.00 &emsp;&emsp;平均学分成绩：88.11/100 &emsp;&emsp;专业排名：17/242</strong></p>
+            <p><strong>英语水平：&emsp;CET-4：570 &emsp;CET-6：587</strong></p>
             <p>主修课程：设计模式（97）、编译原理（96）、线性代数（96）、计算机图形学（94）、离散数学（92）等</p>
-            <p>个人技能：CET-4：570，CET-6：587</p>
         </div>
 
         <div class="section">
-            <h2>科研竞赛</h2>
-            <p><strong>《小A的论文名称》 独立作者 20xx.xx-20xx.xx</strong></p>
+            <h2>科研项目</h2>
+            <div class="flex-container">
+                <div class="flex-item-left"><strong>科研训练项目：《图像特征检测与匹配算法研究》| 核心成员</strong></div>
+                <div class="flex-item-right"><strong>2022.09-2023.09</strong></div>
+            </div>
             <ul>
-                <li>文章基于20xx年-20xx年xxx公司数据，将xxx法与xxx模型相结合，研究了……影响效应，并考察了在不同情境下xxx对xxx的政策效果。文章丰富了xxxx的文献研究，对政策制定者进一步深化税制改革具有重要的借鉴意义。作为独立作者阅读xx篇文献，自学PSM、DID模型、DDD模型以及Stata软件并完成实证分析。</li>
+                <li>项目介绍：图像特征检测与匹配是计算机视觉实现的基础，本项目计划根据图像的局部运动一致性来实现高效的图像特征匹配算法，让学生了解科学研究的基本方法和主要思路，提高科研兴趣。</li>
+                <li>主要工作：查阅文献了解图像特征匹配的研究与发展趋势；了解目前的特征匹配算法并进行复现；实现一种高效的图像特征匹配算法；负责撰写项目的中期检查报告、结题答辩报告。</li>
             </ul>
-            <p><strong>教育部人文社会科学研究青年基金项目 核心成员 20xx.xx-至今</strong></p>
+            <div class="flex-container">
+                <div class="flex-item-left"><strong>科研训练项目：《基于深度学习的行人目标跟踪算法研究》 | 核心成员</strong></div>
+                <div class="flex-item-right"><strong>2023.09-至今</strong></div>
+            </div>
             <ul>
-                <li>参与会计系青年讲师xxx老师的《项目名称》教育部人文社会科学研究青年基金项目。利用Stata和Excel从20万余条xxx数据中整理出可用xxx数据共xxx条；对近5万条xxx原始数据进行处理并匹配。目前已完成核心数据的整理和模型的构建，在此过程中接受了导师的严格规范的科研训练指导。</li>
-            </ul>
-            <p><strong>第x届中国“互联网＋”大学生创新创业大赛 省级·金奖 & 国家级·铜奖 20xx.xx-20xx.xx</strong></p>
-            <ul>
-                <li>作为团队第三负责人负责商业计划书中生产预算和财务分析的撰写，制作三大报表，协助撰写xx页项目书。</li>
-                <li>在xxx市xxx公司中担任会计一职，负责公司日常财务记录分析、预测公司未来的财务状况等；参与公司的融资决策、营运方案和商业模式的制定等。</li>
-            </ul>
-            <p><strong>全国大学生计算机设计大赛 省级·二等奖 & 国家级·三等奖 20xx.xx-20xx.xx</strong></p>
-            <ul>
-                <li>以xxx为主题，与团队成员共同构思、设计一款“产品名称”，并作为项目核心成员进行展示答辩。</li>
-                <li>主要负责该产品市场分析、需求预测，进行产品核心性能的设计与可行性分析。</li>
-            </ul>
-            <p><strong>第x届“xxx”财务决策模拟大赛 xx赛区·一等奖 & 国家级·三等奖 20xx.xx-20xx.xx</strong></p>
-            <ul>
-                <li>在模拟经营公司中担任成本管理会计一职，负责根据原始凭证编制各类成本分配表、完成各项税费的申报。</li>
-                <li>基于成本预算、对未来财务状况的预测等角度参与公司采购与销售、营运计划的制定。</li>
+                <li>项目介绍：随着城市安全和智能交通的需求日益增加，行人目标跟踪技术在监控、自动驾驶等领域的应用逐渐成为研究热点。为提高行人目标跟踪算法的实时性能和准确性，本课题基于深度学习对当前的行人目标跟踪算法进行研究。</li>
+                <li>主要工作：查阅行人目标跟踪相关文献，复现基于Transformer和GNN的行人目标跟踪模型，并与YOLO+SORT模型进行比较，尝试引入注意力机制等提高模型性能；撰写项目中期检查报告。</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>项目实践</h2>
-            <p><strong>xxx保险实训 队长 优秀团队 & 企业推荐信 20xx.xx-20xx.xx</strong></p>
+            <h2>竞赛荣誉</h2>
+            <p><strong>竞赛奖项</strong></p>
             <ul>
-                <li>基于经济环境与法律环境分析中国与某地保险产品的异同处展开优劣势分析，并提出相关建议。</li>
-                <li>组织协调团队工作，进行答辩；作为唯一优秀团队，获得由董事长签字的企业推荐信。</li>
+                <li class="flex-container">
+                    <div class="flex-item-left">第十四届蓝桥杯大赛C/C++程序设计大学A组软件赛</div>
+                    <div class="flex-item-center">国家级三等奖</div>
+                    <div class="flex-item-right">2023.04</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">第十五届蓝桥杯大赛C/C++程序设计大学A组软件赛</div>
+                    <div class="flex-item-center">省级一等奖</div>
+                    <div class="flex-item-right">2024.04</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">第十四届蓝桥杯大赛 “元镜杯”专项赛</div>
+                    <div class="flex-item-center">国家级三等奖</div>
+                    <div class="flex-item-right">2023.10</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">第四届全国高校计算机能力挑战赛</div>
+                    <div class="flex-item-center">国家级一等奖</div>
+                    <div class="flex-item-right">2023.11</div>
+                </li>
             </ul>
+            <p><strong>荣誉奖励</strong></p>
+            <div class="flex-container">
+        <div class="flex-item-left">
+            <ul>
+                <li>2021-2022学年 校一等奖学金</li>
+                <li>2022-2023学年 校一等奖学金</li>
+                <li>2022年 江西省生源地信用助学贷款优秀志愿者</li>
+            </ul>
+        </div>
+        <div class="flex-item-left">
+            <ul>
+                <li>2021-2022学年 校三好学生</li>
+                <li>2021-2022学年 校社会活动积极分子</li>
+                <li>2023年 萍乡市支教计划优秀志愿者</li>
+            </ul>
+        </div>
+    </div>
         </div>
 
         <div class="section">
-            <h2>其他信息</h2>
+            <h2>实践经历</h2>
             <ul>
-                <li>计算机水平：熟练使用Office系列办公软件，具备应用Stata进行数据统计处理能力。</li>
-                <li>自我评价：
-                    <ul>
-                        <li>财务基础扎实：专业课程取得均分90+优异成绩，ACCA一年半内已通过F1-F5，F7，F8，F9；</li>
-                        <li>具备独立研究能力：本科期间学术及项目研究经历丰富，系统掌握专业研究方法；</li>
-                        <li>组织领导能力强：曾任组织与宣传委员及班级团支部书记，共组织开展10次集体活动，作为校剧社主要演员完成6次大型话剧。</li>
-                    </ul>
+                <li class="flex-container">
+                    <div class="flex-item-left">第七届中国国际互联网+大学生创新创业大赛</div>
+                    <div class="flex-item-center">志愿者</div>
+                    <div class="flex-item-right">2021.09 - 2021.10</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">江西省暑期高校生源地信用助学贷款</div>
+                    <div class="flex-item-center">志愿者</div>
+                    <div class="flex-item-right">2022.06 - 2022.09</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">萍乡市暑期支教课堂公益计划</div>
+                    <div class="flex-item-center">志愿者</div>
+                    <div class="flex-item-right">2023.07 - 2023.08</div>
                 </li>
             </ul>
         </div>
