@@ -25,8 +25,8 @@
             flex: 1;
         }
         .profile-pic {
-            width: 132px; 
-            height: 180px; 
+            width: 132px; /* 2寸照片的标准大小为宽度 3.5 厘米 */
+            height: 180px; /* 2寸照片的标准大小为高度 4.8 厘米 */
             object-fit: cover;
             position: absolute;
             right: 0;
@@ -74,13 +74,19 @@
             flex: 3;
             text-align: center;
         }
+        .list-item::before {
+            content: "•";
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="header-text">
-                <h1>何天颢</h1>
+                <h2>何天颢</h2>
                 <p>邮箱：riveertian@163.com | 电话：18397992633</p>
                 <p>地址：江西省南昌市红谷滩区学府大道999号</p>
             </div>
@@ -90,13 +96,14 @@
         <div class="section">
             <h2>教育背景</h2>
             <div class="flex-container-edu">
-                <div class="flex-item-left"><strong>南昌大学（211、双一流高校）</strong></div>
-                <div class="flex-item-center-edu"><strong>数学与计算机学院</strong></div>
-                <div class="flex-item-right"><strong>计算机科学与技术专业</strong></div>
+                <div class="flex-item-left">南昌大学（211、双一流高校）</div>
+                <div class="flex-item-center-edu">数学与计算机学院</div>
+                <div class="flex-item-right">计算机科学与技术专业</div>
             </div>
             <p><strong>平均学分绩点（GPA）：3.70/4.00 &emsp;&emsp;平均学分成绩：88.11/100 &emsp;&emsp;专业排名：17/242</strong></p>
             <p><strong>英语水平：&emsp;CET-4：570 &emsp;CET-6：587</strong></p>
             <p>主修课程：设计模式（97）、编译原理（96）、线性代数（96）、计算机图形学（94）、离散数学（92）等</p>
+            <p><strong>个人技能：</strong>具有良好的英文读写能力，熟悉C++、Python、Java、Matlab等编程语言</p>
         </div>
 
         <div class="section">
@@ -106,16 +113,16 @@
                 <div class="flex-item-right"><strong>2022.09-2023.09</strong></div>
             </div>
             <ul>
-                <li>项目介绍：图像特征检测与匹配是计算机视觉实现的基础，本项目计划根据图像的局部运动一致性来实现高效的图像特征匹配算法，让学生了解科学研究的基本方法和主要思路，提高科研兴趣。</li>
-                <li>主要工作：查阅文献了解图像特征匹配的研究与发展趋势；了解目前的特征匹配算法并进行复现；实现一种高效的图像特征匹配算法；负责撰写项目的中期检查报告、结题答辩报告。</li>
+                <li>项目介绍：本项目研究基于局部运动一致性的图像匹配算法，结合SIFT和ORB算法检测提取特征点和特征描述子，并基于FLANN和局部邻域一致性进行特征点匹配和筛选，减少了三维视觉重建中的误匹配率及相关的模型扭曲问题。</li>
+                <li>个人工作：查阅相关文献，熟悉常见的特征点提取和匹配算法，收集用于图像匹配的数据集并进行预处理，实现一种基于局部邻域一致性的特征点筛选方法，结合SIFT、ORB算法的特点进行优化，提高算法准确性和效率。</li>
             </ul>
             <div class="flex-container">
-                <div class="flex-item-left"><strong>科研训练项目：《基于深度学习的行人目标跟踪算法研究》 | 核心成员</strong></div>
+                <div class="flex-item-left"><strong>科研训练项目：《基于深度学习的行人目标跟踪算法研究》| 核心成员</strong></div>
                 <div class="flex-item-right"><strong>2023.09-至今</strong></div>
             </div>
             <ul>
-                <li>项目介绍：随着城市安全和智能交通的需求日益增加，行人目标跟踪技术在监控、自动驾驶等领域的应用逐渐成为研究热点。为提高行人目标跟踪算法的实时性能和准确性，本课题基于深度学习对当前的行人目标跟踪算法进行研究。</li>
-                <li>主要工作：查阅行人目标跟踪相关文献，复现基于Transformer和GNN的行人目标跟踪模型，并与YOLO+SORT模型进行比较，尝试引入注意力机制等提高模型性能；撰写项目中期检查报告。</li>
+                <li>项目介绍：本项目研究基于深度学习的行人目标跟踪算法，重点研究任务中的行人目标检测部分，结合目前的Transtrack方法实现模型的轻量化改进，通过引入注意力机制、增加时空建模能力等，提高模型计算效率。</li>
+                <li>个人工作：查阅相关文献，了解目前的多目标跟踪算法，阅读文献了解SORT、DeepSORT、Transformer等多目标跟踪算法，并进行模型复现，通过调整损失函数和优化算法，进一步提高模型性能。</li>
             </ul>
         </div>
 
@@ -124,63 +131,64 @@
             <p><strong>竞赛奖项</strong></p>
             <ul>
                 <li class="flex-container">
-                    <div class="flex-item-left">第十四届蓝桥杯大赛C/C++程序设计大学A组软件赛</div>
+                    <div class="flex-item-left">•&emsp;第十四届蓝桥杯大赛C/C++程序设计大学A组</div>
                     <div class="flex-item-center">国家级三等奖</div>
-                    <div class="flex-item-right">2023.04</div>
+                    <div class="flex-item-right">2023.06</div>
                 </li>
                 <li class="flex-container">
-                    <div class="flex-item-left">第十五届蓝桥杯大赛C/C++程序设计大学A组软件赛</div>
-                    <div class="flex-item-center">省级一等奖</div>
-                    <div class="flex-item-right">2024.04</div>
-                </li>
-                <li class="flex-container">
-                    <div class="flex-item-left">第十四届蓝桥杯大赛 “元镜杯”专项赛</div>
+                    <div class="flex-item-left">•&emsp;第十五届蓝桥杯大赛C/C++程序设计大学A组</div>
                     <div class="flex-item-center">国家级三等奖</div>
-                    <div class="flex-item-right">2023.10</div>
+                    <div class="flex-item-right">2024.06</div>
                 </li>
                 <li class="flex-container">
-                    <div class="flex-item-left">第四届全国高校计算机能力挑战赛</div>
-                    <div class="flex-item-center">国家级一等奖</div>
+                    <div class="flex-item-left">•&emsp;第十四届蓝桥杯大赛 “元镜杯”专项赛</div>
+                    <div class="flex-item-center">国家级三等奖</div>
                     <div class="flex-item-right">2023.11</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">•&emsp;第四届全国高校计算机能力挑战赛C语言组</div>
+                    <div class="flex-item-center">国家级一等奖</div>
+                    <div class="flex-item-right">2023.12</div>
+                </li>
+                <li class="flex-container">
+                    <div class="flex-item-left">•&emsp;第四届全国高校计算机能力挑战赛C++组</div>
+                    <div class="flex-item-center">国家级一等奖</div>
+                    <div class="flex-item-right">2023.12</div>
                 </li>
             </ul>
             <p><strong>荣誉奖励</strong></p>
             <div class="flex-container">
-        <div class="flex-item-left">
-            <ul>
-                <li>2021-2022学年 校一等奖学金</li>
-                <li>2022-2023学年 校一等奖学金</li>
-                <li>2022年 江西省生源地信用助学贷款优秀志愿者</li>
-            </ul>
-        </div>
-        <div class="flex-item-left">
-            <ul>
-                <li>2021-2022学年 校三好学生</li>
-                <li>2021-2022学年 校社会活动积极分子</li>
-                <li>2023年 萍乡市支教计划优秀志愿者</li>
-            </ul>
-        </div>
-    </div>
+                <div class="flex-item-left">
+                    <ul>
+                        <li>•&emsp;2021-2022学年 校一等奖学金</li>
+                        <li>•&emsp;2022-2023学年 校一等奖学金</li>
+                        <li>•&emsp;2022年 江西省生源地信用助学贷款优秀志愿者</li>
+                        <li>•&emsp;2023年 萍乡市支教计划优秀志愿者</li>
+                    </ul>
+                </div>
+                <div class="flex-item-left">
+                    <ul>
+                        <li>•&emsp;2021-2022学年 校三好学生</li>
+                        <li>•&emsp;2022-2023学年 校社会活动积极分子</li>
+                        <li>•&emsp;2022年 南昌大学暑期社会实践先进个人</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="section">
-            <h2>实践经历</h2>
+            <h2>项目实践</h2>
             <ul>
                 <li class="flex-container">
-                    <div class="flex-item-left">第七届中国国际互联网+大学生创新创业大赛</div>
-                    <div class="flex-item-center">志愿者</div>
-                    <div class="flex-item-right">2021.09 - 2021.10</div>
+                    <div class="flex-item-left">《基于神经网络的Mnist手写数字识别算法实现》 《机器学习与数据挖掘》课程设计 | 项目负责人</div>
+                    <div class="flex-item-right">2023.12</div>
                 </li>
+                <li>项目以神经网络为基础，基于pytorch框架，定义了卷积神经网络CNN类Net作为神经网络模型，使用MNIST数据集进行训练和测试，调整学习率、动量因子等参数，实现对Mnist数据集的精准识别，准确率达到99%。</li>
                 <li class="flex-container">
-                    <div class="flex-item-left">江西省暑期高校生源地信用助学贷款</div>
-                    <div class="flex-item-center">志愿者</div>
-                    <div class="flex-item-right">2022.06 - 2022.09</div>
+                    <div class="flex-item-left">《基于SpringBoot的在线聊天系统》 《JavaWeb程序设计》课程设计 | 项目负责人</div>
+                    <div class="flex-item-right">2024.05</div>
                 </li>
-                <li class="flex-container">
-                    <div class="flex-item-left">萍乡市暑期支教课堂公益计划</div>
-                    <div class="flex-item-center">志愿者</div>
-                    <div class="flex-item-right">2023.07 - 2023.08</div>
-                </li>
+                <li>该项目采用小组协作的方式，使用前后端分离的模式进行开发。项目使用SpringBoot框架和vue进行开发，并使用git作为版本控制与协同开发的工具，实现了在线聊天功能，提高了团队开发协作和项目管理的能力。</li>
             </ul>
         </div>
     </div>
